@@ -1,0 +1,38 @@
+﻿Estatisticas de Importação
+
+Passo 2: povoar a tabela EMPRESA com os dados da tabela ouro 
+-- na tab ouro: 57 empresas
+-- importados: 57 empresas #não foi feita verificação de validade do CNPJ
+-- faltantes: 0 #apesar disso uma das empresas não possui nenhum dado na RAIS
+# 00382183000157
+# em consulta na internet a empresa 
+# Razão Social: Veda Gax Comercial Ltda
+# Fantasia: VEDA GAX
+# Situação: BAIXADA
+# Motivo Situação: INAPTIDAO (LEI 11.941/2009 ART.54)
+
+
+Passo 3: criar a view com os dados da tabela ouro 
+-- período 1992 - 2014: 214.552 registros
+-- período 1985 - 2014: 288.353 registros
+
+
+Passo 5: povoar as tabelas de HIST
+# O preenchimento dos campos da tabela Empresa mantém os dados mais recentes. 
+# as avaliações de preenchimento entre periodos (1992-2014; 1985-2014) mostrou
+# que os dados mais recentes são melhores preenchidos.
+
+-- período 1985 - 2014:
+-- asbesto.tb_hist_atividade_economica_empresa: 1132
+-- asbesto.tb_hist_municipio_empresa: 1525
+-- asbesto.tb_hist_natureza_juridica_empresa: 590
+-- asbesto.tb_hist_tamanho_estab: 1128
+-- asbesto.tb_hist_tipo_estab: 1136
+
+
+Passo 6: atualizar a tabela empresa usando a function
+-- toal de campos atualizados: 7 todos com base no histórico
+-- dos campos em questão mas considerando o estatus mais atual
+
+
+
